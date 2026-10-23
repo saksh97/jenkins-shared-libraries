@@ -1,4 +1,3 @@
-def koko() 
-{
-	echo "I am from koko"
+def koko(){
+echo "Another stage koko ------------"
 }
