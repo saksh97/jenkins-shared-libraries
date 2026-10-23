@@ -1,0 +1,81 @@
+Started by user saksh
+Obtained Jenkinsfile from git https://github.com/saksh97/jenkins-shared-libraries.git
+Loading library shared@main
+Attempting to resolve main from remote references...
+ > git --version # timeout=10
+ > git --version # 'git version 2.53.0'
+ > git ls-remote -h -- https://github.com/saksh97/jenkins-shared-libraries.git # timeout=10
+Found match: refs/heads/main revision 1de1e9b7c8e043ac505ee309ffb790c5f47ded41
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/sshared-lib@libs/7edf6133c6ed620a3c92cbdf1a178a50b3e32d52abcf04bfc55da5624713652a/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/saksh97/jenkins-shared-libraries.git # timeout=10
+Fetching without tags
+Fetching upstream changes from https://github.com/saksh97/jenkins-shared-libraries.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.53.0'
+ > git fetch --no-tags --force --progress -- https://github.com/saksh97/jenkins-shared-libraries.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision 1de1e9b7c8e043ac505ee309ffb790c5f47ded41 (main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1de1e9b7c8e043ac505ee309ffb790c5f47ded41 # timeout=10
+Commit message: "Pushing the Jenkinsfile"
+ > git rev-list --no-walk d37de65f81e97a50d3c26fa5d4dadc9f76125e47 # timeout=10
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/sshared-lib
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/saksh97/jenkins-shared-libraries.git
+ > git init /var/lib/jenkins/workspace/sshared-lib # timeout=10
+Fetching upstream changes from https://github.com/saksh97/jenkins-shared-libraries.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.53.0'
+ > git fetch --tags --force --progress -- https://github.com/saksh97/jenkins-shared-libraries.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/saksh97/jenkins-shared-libraries.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 1de1e9b7c8e043ac505ee309ffb790c5f47ded41 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1de1e9b7c8e043ac505ee309ffb790c5f47ded41 # timeout=10
+Commit message: "Pushing the Jenkinsfile"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Hello)
+[Pipeline] echo
+Hello World
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Github sl)
+[Pipeline] echo
+calling sl .....
+[Pipeline] echo
+My name is anthoney gonsalvis... Joking I am saksh
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Call you maybe)
+[Pipeline] echo
+Another one
+[Pipeline] echo
+Another stage koko ------------
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
